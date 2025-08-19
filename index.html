@@ -1,362 +1,399 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kot Jangoo Restaurant</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .carousel-container {
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
-        .carousel-container::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kot Jangoo Restaurant</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .carousel-container { overflow-x: auto; scrollbar-width: none; }
+    .carousel-container::-webkit-scrollbar { display: none; }
+  </style>
 </head>
+
 <body class="bg-[#F5DEB3]">
+  <header class="bg-[#8B2323] text-white py-4 px-6 shadow-lg sticky top-0 z-50 relative">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Kot Jangoo</h1>
 
-    <header class="bg-[#8B2323] text-white py-4 px-6 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Kot Jangoo</h1>
-            <nav>
-                <ul class="flex items-center space-x-6">
-                    <li><a href="#" class="hover:text-gray-300">Home</a></li>
-                    
-                    <li class="group">
-                        <a href="#menu" class="hover:text-gray-300 flex items-center">
-                            Menu <i class="fas fa-chevron-down text-xs ml-2"></i>
-                        </a>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-40px)] bg-[#F5DEB3]/50 backdrop-blur-sm shadow-lg p-8 hidden group-hover:block rounded-b-lg">
-                            <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-black">
-                                <div>
-                                    <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Starters</h3>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="hover:text-[#8B2323]">Fish Cracker</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Spicy Wings</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Chicken Spring Roll</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Vegetable Roll</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Soups</h3>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="hover:text-[#8B2323]">Special Soup</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Hot & Sour Soup</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Chicken Corn Soup</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Chicken Vegetable Soup</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Salad</h3>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="hover:text-[#8B2323]">KJ Special Salad Platter</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Chicken Pineapple Salad</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Russian Salad</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Macaroni Salad</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Fried</h3>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="hover:text-[#8B2323]">Crispy Chicken Wings</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Chicken Chilli Dry</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Dhaka Chicken</a></li>
-                                        <li><a href="#" class="hover:text-[#8B2323]">Finger Chicken</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-                    <li><a href="#" class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-md ml-4 text-black font-semibold">Order Online</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      <nav class="md:flex items-center md:space-x-6">
+        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
 
-    <<section class="relative h-[500px] bg-cover bg-center" style="background-image: url('images/Kot-Jongo.webp');">
+        <ul id="main-nav" class="hidden md:flex items-center md:space-x-6">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+
+          <!-- Desktop Menu (Mega Menu) -->
+          <li class="hidden md:block group">
+            <a href="#menu" class="hover:text-gray-300 flex items-center">
+              Menu <i class="fas fa-chevron-down text-xs ml-2"></i>
+            </a>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-3rem)] bg-[#F5DEB3]/50 backdrop-blur-sm shadow-lg p-8 hidden group-hover:block rounded-b-lg">
+              <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-black">
+                <div>
+                  <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Starters</h3>
+                  <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-[#8B2323]">Fish Cracker</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Spicy Wings</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Chicken Spring Roll</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Vegetable Roll</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Soups</h3>
+                  <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-[#8B2323]">Special Soup</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Hot & Sour Soup</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Chicken Corn Soup</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Chicken Vegetable Soup</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Salad</h3>
+                  <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-[#8B2323]">KJ Special Salad Platter</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Chicken Pineapple Salad</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Russian Salad</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Macaroni Salad</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg mb-4 border-b border-[#8B2323] pb-2 text-[#8B2323]">Fried</h3>
+                  <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-[#8B2323]">Crispy Chicken Wings</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Chicken Chilli Dry</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Dhaka Chicken</a></li>
+                    <li><a href="#" class="hover:text-[#8B2323]">Finger Chicken</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Mobile Menu Dropdown -->
+          <li class="md:hidden">
+            <a href="#menu" class="hover:text-gray-300 flex items-center" onclick="toggleMenuDropdown()">
+              Menu <i class="fas fa-chevron-down text-xs ml-2"></i>
+            </a>
+            <ul id="menu-dropdown" class="hidden absolute top-full left-0 w-full bg-[#8B2323] text-white py-2 px-4 shadow-lg">
+              <li class="py-2"><a href="#" class="block hover:text-gray-300">Starters</a></li>
+              <li class="py-2"><a href="#" class="block hover:text-gray-300">Soups</a></li>
+              <li class="py-2"><a href="#" class="block hover:text-gray-300">Salad</a></li>
+              <li class="py-2"><a href="#" class="block hover:text-gray-300">Fried</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#about" class="hover:text-gray-300">About</a></li>
+          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+          <li><a href="#" class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-md ml-4 text-black font-semibold">Order Online</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="relative h-[500px] bg-cover bg-center" style="background-image: url('images/Kot-Jongo.webp');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="container mx-auto h-full flex items-center justify-center text-center text-white">
-        <div>
-            <h2 class="text-4xl font-bold mb-4 text-yellow-400 drop-shadow-md">Authentic Flavors, Fresh Ingredients</h2>
-            <p class="text-xl mb-6">Free Home Delivery | Open Daily 11 AM - 10 PM</p>
-            <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg">Order Now</button>
-        </div>
+      <div>
+        <h2 class="text-4xl font-bold mb-4 text-yellow-400 drop-shadow-md">Authentic Flavors, Fresh Ingredients</h2>
+        <p class="text-xl mb-6">Free Home Delivery | Open Daily 11 AM - 10 PM</p>
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg">Order Now</button>
+      </div>
     </div>
-</section>
+  </section>
 
-    <section class="py-16 px-6 bg-[#F5DEB3]">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Special Items</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="images/Signature-Chicken-Biryani.jpg" alt="Special Dish 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Signature Chicken Biryani</h3>
-                        <p class="text-gray-600 mb-4">Aromatic basmati rice cooked with tender chicken, saffron, and secret spices.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-lg">₹650</span>
-                            <button class="bg-[#8B2323] text-white px-4 py-2 rounded-md hover:bg-red-800">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="images/cheese-burst-pizza.jpg" alt="Special Dish 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Cheese Burst Pizza</h3>
-                        <p class="text-gray-600 mb-4">Freshly baked crust topped with mozzarella, cheddar, and parmesan cheese.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-lg">₹550</span>
-                            <button class="bg-[#8B2323] text-white px-4 py-2 rounded-md hover:bg-red-800">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="images/Chocolate-Lava-Cake.png" alt="Special Dish 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Chocolate Lava Cake</h3>
-                        <p class="text-gray-600 mb-4">Warm chocolate cake with molten center served with vanilla ice cream.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-lg">₹250</span>
-                            <button class="bg-[#8B2323] text-white px-4 py-2 rounded-md hover:bg-red-800">Order Now</button>
-                        </div>
-                    </div>
-                </div>
+  <section class="py-16 px-6 bg-[#F5DEB3]">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Special Items</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/Signature-Chicken-Biryani.jpg" alt="Special Dish 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Signature Chicken Biryani</h3>
+            <p class="text-gray-600 mb-4">Aromatic basmati rice cooked with tender chicken, saffron, and secret spices.</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-lg">₹650</span>
+              <button class="bg-[#8B2323] text-white px-4 py-2 rounded-md hover:bg-red-800">Order Now</button>
             </div>
+          </div>
         </div>
-    </section>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/cheese-burst-pizza.jpg" alt="Special Dish 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Cheese Burst Pizza</h3>
+            <p class="text-gray-600 mb-4">Freshly baked crust topped with mozzarella, cheddar, and parmesan cheese.</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-lg">₹550</span>
+              <button class="bg-[#8B2323] text-white px-4 py-2 rounded-md hover:bg-red-800">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/Chocolate-Lava-Cake.png" alt="Special Dish 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Chocolate Lava Cake</h3>
+            <p class="text-gray-600 mb-4">Warm chocolate cake with molten center served with vanilla ice cream.</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-lg">₹250</span>
+              <button class="bg-[#8B2323] text-white px-4 py-2 rounded-md hover:bg-red-800">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="menu" class="py-16 px-6 bg-[#F5DEB3]">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Menu</h2>
-            
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Starters</h3>
-                <div class="carousel-container flex space-x-4 pb-4">
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1606228524416-8b65d7b8c7d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Fish Cracker" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Fish Cracker</h4>
-                        <p class="text-gray-600">Crispy fish crackers with spicy sauce</p>
-                        <p class="font-bold mt-2">₹200</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1614962922339-7cb6b5d9e0dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Spicy Wings" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Spicy Wings</h4>
-                        <p class="text-gray-600">Boneless chicken wings with hot sauce</p>
-                        <p class="font-bold mt-2">₹995</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1568901346375-63dca1915114?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Spring Roll" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Chicken Spring Roll</h4>
-                        <p class="text-gray-600">Golden spring rolls filled with chicken</p>
-                        <p class="font-bold mt-2">₹490</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1590528368742-9b9e9b8b8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Vegetable Roll" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Vegetable Roll</h4>
-                        <p class="text-gray-600">Mixed vegetables wrapped in crispy pastry</p>
-                        <p class="font-bold mt-2">₹390</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Soups</h3>
-                <div class="carousel-container flex space-x-4 pb-4">
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1550695521-4b62e7b83bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Special Soup" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Special Soup</h4>
-                        <p class="text-gray-600">Homemade soup with secret herbs</p>
-                        <p class="font-bold mt-2">₹450</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1583331762813-ea9d7b8a6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Hot & Sour Soup" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Hot & Sour Soup</h4>
-                        <p class="text-gray-600">Spicy and tangy soup with mushrooms</p>
-                        <p class="font-bold mt-2">₹390</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1580826622681-4b9b8c9d8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Corn Soup" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Chicken Corn Soup</h4>
-                        <p class="text-gray-600">Creamy corn soup with chicken pieces</p>
-                        <p class="font-bold mt-2">₹325</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1580933918569-0a0a8b8a8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Vegetable Soup" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Chicken Vegetable Soup</h4>
-                        <p class="text-gray-600">Hearty soup with chicken and seasonal veggies</p>
-                        <p class="font-bold mt-2">₹350</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Salad</h3>
-                <div class="carousel-container flex space-x-4 pb-4">
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1504674900146-37a8d49ab960?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="KJ Special Salad Platter" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">KJ Special Salad Platter</h4>
-                        <p class="text-gray-600">Assorted greens with nuts and dried fruits</p>
-                        <p class="font-bold mt-2">₹900</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1528763388170-07a0ecaa8431?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Pineapple Salad" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Chicken Pineapple Salad</h4>
-                        <p class="text-gray-600">Grilled chicken with pineapple chunks and lettuce</p>
-                        <p class="font-bold mt-2">₹775</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1534422291959-00aadc7c7c1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Russian Salad" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Russian Salad</h4>
-                        <p class="text-gray-600">Potato salad with peas and carrots</p>
-                        <p class="font-bold mt-2">₹650</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1498838625893-02dfd9c1cd3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Macaroni Salad" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Macaroni Salad</h4>
-                        <p class="text-gray-600">Classic macaroni with mayonnaise dressing</p>
-                        <p class="font-bold mt-2">₹450</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Fried</h3>
-                <div class="carousel-container flex space-x-4 pb-4">
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1581091848417-8b5b5d9b8b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Crispy Chicken Wings" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Crispy Chicken Wings</h4>
-                        <p class="text-gray-600">(10 Piece)</p>
-                        <p class="font-bold mt-2">₹950</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1513104886277-4db9a5d72ce1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Chilli Dry" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Chicken Chilli Dry</h4>
-                        <p class="text-gray-600">Dry chilli chicken with peanuts</p>
-                        <p class="font-bold mt-2">₹1075</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1581091848417-8b5b5d9b8b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Dhaka Chicken" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Dhaka Chicken</h4>
-                        <p class="text-gray-600">Bangladeshi-style chicken curry</p>
-                        <p class="font-bold mt-2">₹1025</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
-                        <img src="https://images.unsplash.com/photo-1581091848417-8b5b5d9b8b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Finger Chicken" class="w-full h-32 object-cover rounded-md mb-3">
-                        <h4 class="font-semibold">Finger Chicken</h4>
-                        <p class="text-gray-600">(8 Piece)</p>
-                        <p class="font-bold mt-2">₹999</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="menu" class="py-16 px-6 bg-[#F5DEB3]">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Menu</h2>
 
-    <section class="py-16 px-6 bg-[#F5DEB3]">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-                    <div class="text-4xl text-[#8B2323] mb-4">
-                        <i class="fas fa-hands-wash"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Hygienic Standards</h3>
-                    <p class="text-gray-600">We maintain strict hygiene protocols throughout our kitchen and dining areas.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-                    <div class="text-4xl text-[#8B2323] mb-4">
-                        <i class="fas fa-carrot"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Fresh Ingredients</h3>
-                    <p class="text-gray-600">All our dishes are prepared with fresh, locally sourced ingredients daily.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-                    <div class="text-4xl text-[#8B2323] mb-4">
-                        <i class="fas fa-user-edit"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Custom Orders</h3>
-                    <p class="text-gray-600">We happily accommodate special dietary requests and customizations.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-                    <div class="text-4xl text-[#8B2323] mb-4">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Fast Delivery</h3>
-                    <p class="text-gray-600">Enjoy piping hot meals delivered to your doorstep within 30 minutes.</p>
-                </div>
-            </div>
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Starters</h3>
+        <div class="carousel-container flex space-x-4 pb-4">
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1606228524416-8b65d7b8c7d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Fish Cracker" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Fish Cracker</h4>
+            <p class="text-gray-600">Crispy fish crackers with spicy sauce</p>
+            <p class="font-bold mt-2">₹200</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1614962922339-7cb6b5d9e0dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Spicy Wings" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Spicy Wings</h4>
+            <p class="text-gray-600">Boneless chicken wings with hot sauce</p>
+            <p class="font-bold mt-2">₹995</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1568901346375-63dca1915114?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Spring Roll" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Chicken Spring Roll</h4>
+            <p class="text-gray-600">Golden spring rolls filled with chicken</p>
+            <p class="font-bold mt-2">₹490</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1590528368742-9b9e9b8b8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Vegetable Roll" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Vegetable Roll</h4>
+            <p class="text-gray-600">Mixed vegetables wrapped in crispy pastry</p>
+            <p class="font-bold mt-2">₹390</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="about" class="py-16 px-6 bg-[#F5DEB3]">
-        <div class="container mx-auto max-w-5xl">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4eb920eaf1c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="rounded-lg shadow-lg w-full h-auto">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6">About Kot Jangoo</h2>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Founded in [Year], Kot Jangoo Restaurant has been serving authentic [Cuisine Type] cuisine to our community for over a decade. Our passion for food and commitment to quality have made us a beloved local spot.
-                    </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        We believe that great food brings people together, which is why we focus on creating memorable dining experiences both in-house and through our delivery service.
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <a href="tel:+918888888888" class="bg-[#8B2323] text-white px-6 py-3 rounded-md hover:bg-red-800 flex items-center">
-                            <i class="fas fa-phone mr-2"></i> Call Us
-                        </a>
-                        <a href="https://wa.me/+918888888888" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 flex items-center">
-                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Soups</h3>
+        <div class="carousel-container flex space-x-4 pb-4">
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1550695521-4b62e7b83bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Special Soup" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Special Soup</h4>
+            <p class="text-gray-600">Homemade soup with secret herbs</p>
+            <p class="font-bold mt-2">₹450</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1583331762813-ea9d7b8a6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Hot & Sour Soup" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Hot & Sour Soup</h4>
+            <p class="text-gray-600">Spicy and tangy soup with mushrooms</p>
+            <p class="font-bold mt-2">₹390</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1580826622681-4b9b8c9d8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Corn Soup" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Chicken Corn Soup</h4>
+            <p class="text-gray-600">Creamy corn soup with chicken pieces</p>
+            <p class="font-bold mt-2">₹325</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1580933918569-0a0a8b8a8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Vegetable Soup" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Chicken Vegetable Soup</h4>
+            <p class="text-gray-600">Hearty soup with chicken and seasonal veggies</p>
+            <p class="font-bold mt-2">₹350</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="contact" class="py-16 px-6 bg-[#F5DEB3]">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Visit Us</h3>
-                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Food Street, City Center</p>
-                    <p class="mb-2"><i class="fas fa-phone mr-2"></i> +91 1234567890</p>
-                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> info@kotjangoo.com</p>
-                    <p class="mb-4"><i class="fas fa-clock mr-2"></i> Mon-Sun: 11 AM - 10 PM</p>
-                    <div class="flex space-x-4 mt-6">
-                        <a href="#" class="text-[#8B2323] hover:text-red-800"><i class="fab fa-facebook-f text-2xl"></i></a>
-                        <a href="#" class="text-[#8B2323] hover:text-red-800"><i class="fab fa-instagram text-2xl"></i></a>
-                        <a href="#" class="text-[#8B2323] hover:text-red-800"><i class="fab fa-twitter text-2xl"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Send Message</h3>
-                    <form>
-                        <input type="text" placeholder="Your Name" class="w-full p-3 mb-3 border border-gray-300 rounded-md">
-                        <input type="email" placeholder="Your Email" class="w-full p-3 mb-3 border border-gray-300 rounded-md">
-                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 mb-3 border border-gray-300 rounded-md"></textarea>
-                        <button type="submit" class="bg-[#8B2323] text-white px-6 py-3 rounded-md hover:bg-red-800">Send Message</button>
-                    </form>
-                </div>
-            </div>
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Salad</h3>
+        <div class="carousel-container flex space-x-4 pb-4">
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1504674900146-37a8d49ab960?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="KJ Special Salad Platter" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">KJ Special Salad Platter</h4>
+            <p class="text-gray-600">Assorted greens with nuts and dried fruits</p>
+            <p class="font-bold mt-2">₹900</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1528763388170-07a0ecaa8431?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Pineapple Salad" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Chicken Pineapple Salad</h4>
+            <p class="text-gray-600">Grilled chicken with pineapple chunks and lettuce</p>
+            <p class="font-bold mt-2">₹775</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1534422291959-00aadc7c7c1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Russian Salad" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Russian Salad</h4>
+            <p class="text-gray-600">Potato salad with peas and carrots</p>
+            <p class="font-bold mt-2">₹650</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1498838625893-02dfd9c1cd3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Macaroni Salad" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Macaroni Salad</h4>
+            <p class="text-gray-600">Classic macaroni with mayonnaise dressing</p>
+            <p class="font-bold mt-2">₹450</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer class="bg-[#8B2323] text-white py-8 px-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Kot Jangoo Restaurant. All rights reserved.</p>
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold text-[#8B2323] mb-4 border-b-2 border-[#8B2323] pb-2">Fried</h3>
+        <div class="carousel-container flex space-x-4 pb-4">
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1581091848417-8b5b5d9b8b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Crispy Chicken Wings" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Crispy Chicken Wings</h4>
+            <p class="text-gray-600">(10 Piece)</p>
+            <p class="font-bold mt-2">₹950</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1513104886277-4db9a5d72ce1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Chicken Chilli Dry" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Chicken Chilli Dry</h4>
+            <p class="text-gray-600">Dry chilli chicken with peanuts</p>
+            <p class="font-bold mt-2">₹1075</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1581091848417-8b5b5d9b8b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Dhaka Chicken" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Dhaka Chicken</h4>
+            <p class="text-gray-600">Bangladeshi-style chicken curry</p>
+            <p class="font-bold mt-2">₹1025</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-4 min-w-[200px]">
+            <img src="https://images.unsplash.com/photo-1581091848417-8b5b5d9b8b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Finger Chicken" class="w-full h-32 object-cover rounded-md mb-3">
+            <h4 class="font-semibold">Finger Chicken</h4>
+            <p class="text-gray-600">(8 Piece)</p>
+            <p class="font-bold mt-2">₹999</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-[#F5DEB3]">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl text-[#8B2323] mb-4">
+            <i class="fas fa-hands-wash"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Hygienic Standards</h3>
+          <p class="text-gray-600">We maintain strict hygiene protocols throughout our kitchen and dining areas.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl text-[#8B2323] mb-4">
+            <i class="fas fa-carrot"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Fresh Ingredients</h3>
+          <p class="text-gray-600">All our dishes are prepared with fresh, locally sourced ingredients daily.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl text-[#8B2323] mb-4">
+            <i class="fas fa-user-edit"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Custom Orders</h3>
+          <p class="text-gray-600">We happily accommodate special dietary requests and customizations.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl text-[#8B2323] mb-4">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Fast Delivery</h3>
+          <p class="text-gray-600">Enjoy piping hot meals delivered to your doorstep within 30 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-16 px-6 bg-[#F5DEB3]">
+    <div class="container mx-auto max-w-5xl">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1517248135467-4eb920eaf1c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-6">About Kot Jangoo</h2>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Founded in [Year], Kot Jangoo Restaurant has been serving authentic [Cuisine Type] cuisine to our community for over a decade. Our passion for food and commitment to quality have made us a beloved local spot.
+          </p>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            We believe that great food brings people together, which is why we focus on creating memorable dining experiences both in-house and through our delivery service.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="tel:+918888888888" class="bg-[#8B2323] text-white px-6 py-3 rounded-md hover:bg-red-800 flex items-center">
+              <i class="fas fa-phone mr-2"></i> Call Us
+            </a>
+            <a href="https://wa.me/918888888888" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 flex items-center">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 px-6 bg-[#F5DEB3]">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Visit Us</h3>
+          <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Food Street, City Center</p>
+          <p class="mb-2"><i class="fas fa-phone mr-2"></i> +91 1234567890</p>
+          <p class="mb-2"><i class="fas fa-envelope mr-2"></i> info@kotjangoo.com</p>
+          <p class="mb-4"><i class="fas fa-clock mr-2"></i> Mon-Sun: 11 AM - 10 PM</p>
+          <div class="flex space-x-4 mt-6">
+            <a href="#" class="text-[#8B2323] hover:text-red-800"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="#" class="text-[#8B2323] hover:text-red-800"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="#" class="text-[#8B2323] hover:text-red-800"><i class="fab fa-twitter text-2xl"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Send Message</h3>
+          <form>
+            <input type="text" placeholder="Your Name" class="w-full p-3 mb-3 border border-gray-300 rounded-md">
+            <input type="email" placeholder="Your Email" class="w-full p-3 mb-3 border border-gray-300 rounded-md">
+            <textarea placeholder="Your Message" rows="4" class="w-full p-3 mb-3 border border-gray-300 rounded-md"></textarea>
+            <button type="submit" class="bg-[#8B2323] text-white px-6 py-3 rounded-md hover:bg-red-800">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#8B2323] text-white py-8 px-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Kot Jangoo Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('absolute');
+      nav.classList.toggle('top-full');
+      nav.classList.toggle('left-0');
+      nav.classList.toggle('w-full');
+      nav.classList.toggle('bg-[#8B2323]');
+      nav.classList.toggle('flex-col');
+      nav.classList.toggle('p-6');
+      nav.classList.toggle('space-x-0');
+      nav.classList.toggle('space-y-4');
+    }
+
+    function toggleMenuDropdown() {
+      const dropdown = document.getElementById('menu-dropdown');
+      dropdown.classList.toggle('hidden');
+    }
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+  </script>
 </body>
-
 </html>
